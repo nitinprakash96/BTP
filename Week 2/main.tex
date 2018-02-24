@@ -52,7 +52,7 @@
 	numbersep=5pt,                  
 	showspaces=false,                
 	showstringspaces=false,
-	showtabs=false,                  
+	showtabs=false,
 	tabsize=2
 }
 
@@ -159,5 +159,146 @@ And as expected it outputs an array of 50 0's, 50 1's and 50 2's.
 %% \includegraphics{label.png}
 
 
-\end{document}
 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+
+\begin{center}\vspace{-1cm}
+\textbf{ \large BTP Weekly Report 2}\\
+February 23, 2018
+\end{center}
+
+\rule{\linewidth}{0.1mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip
+
+
+\begin{document}
+
+\flushbottom
+\maketitle
+
+\thispagestyle{empty}
+
+
+\section*{Data Visualization}
+
+When comparing variables in a multidimensional
+or multivariate dataset, some conclusions must
+be drawn from the patterns in the dataset. In
+comparing different variables it is good practice
+to first make an educated assumption on what
+type of patterns you wish to find. 
+
+
+\begin{itemize}
+\item Parallel Coordinates 
+\item Andrews Curves
+\item Pair Plot
+\item Box Plot
+\end{itemize}
+
+
+
+
+\subsection*{Parallel Coordinates}
+
+
+
+
+
+Parallel coordinates is a plotting technique for plotting multivariate data. It allows one to see clusters in data and to estimate other statistics visually. Using parallel coordinates points are represented as connected line segments. Each vertical line represents one attribute. One set of connected line segments represents one data point. Points that tend to cluster will appear closer together.
+
+
+\begin{figure}[ht]
+\centering
+\label{fig:pcp}
+\graphicspath{ {images/} }
+\includegraphics[width=10cm]{images/pcp.png}
+\caption{Parallel Coordinates Plot}
+\end{figure}
+
+\section*{Andrews Curves }
+
+
+ Andrews curves allow one to plot multivariate data as a large number of curves that are created using the attributes of samples as coefficients for Fourier series. By coloring these curves differently for each class it is possible to visualize data clustering. Curves belonging to samples of the same class will usually be closer together and form larger structures.
+
+\begin{figure}[ht]
+\centering
+\label{fig:acp}
+\graphicspath{ {images/} }
+\includegraphics[width=10cm]{images/acp.png}
+\caption{Andrews Curves Plot}
+\end{figure}
+
+
+
+\section*{Pair Plot}
+
+
+The first scatterplot graph compares the
+sepal length with the classification of flower.
+The second scatterplot graph compares
+the sepal width with the classification of flower.
+The third scatterplot graph compares the
+petal length with the classification of flower. The fourth scatterplot graph compares the
+petal width with the classification of flower.
+From these four scatterplots we can determine a
+pattern and therefore create a possible predictor. 
+
+\begin{figure}[ht]
+\centering
+\label{fig:pairplot}
+\graphicspath{ {images/} }
+\includegraphics[width=10cm]{images/pairplot.png}
+\caption{Pair Plot}
+\end{figure}
+
+\section*{Box Plot}
+After you check the distribution of the data by plotting the histogram, the second thing to do is to look for outliers. Identifying the outliers is important because it might happen that an association you find in your analysis can be explained by the presence of outliers.
+
+
+Through box plots we find the minimum, lower quartile (25th percentile), median (50th percentile), upper quartile (75th percentile), and maximum of an continues variable.Each horizontal line starting from bottom will show the minimum, lower quartile, median, upper quartile and maximum value.
+
+
+\begin{figure}[ht]
+\centering
+\label{fig:boxplot}
+\graphicspath{ {images/} }
+\includegraphics[width=12cm]{images/boxplot.png}
+\caption{Box Plot}
+\end{figure}
+
+
+
+
+
+
+
+\end{document}
