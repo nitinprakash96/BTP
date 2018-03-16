@@ -1,0 +1,365 @@
+\documentclass[11pt,letterpaper]{article}
+%\topmargin -.45in
+\textwidth 6.5in
+\textheight 9.in
+\oddsidemargin 0in
+\headheight 0in
+\usepackage{graphicx}
+\usepackage{fancybox}
+\usepackage{hyperref}
+%\usepackage{palatino}
+\usepackage[utf8]{inputenc} %solucion del problema de los acentos.
+\usepackage{epsfig,graphicx}
+\usepackage{multicol,pst-plot}
+\usepackage{pstricks}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{eucal}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\pagestyle{empty}
+\DeclareMathOperator{\tr}{Tr}
+\newcommand*{\op}[1]{\check{\mathbf#1}}
+\newcommand{\bra}[1]{\langle #1 |}
+\newcommand{\ket}[1]{| #1 \rangle}
+\newcommand{\braket}[2]{\langle #1 | #2 \rangle}
+\newcommand{\mean}[1]{\langle #1 \rangle}
+\newcommand{\opvec}[1]{\check{\vec #1}}
+\renewcommand{\sp}[1]{$${\begin{split}#1\end{split}}$$}
+
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=5pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\begin{document}
+\pagestyle{plain}
+
+\begin{center}\vspace{-1cm}
+\textbf{ \large BTP Weekly Report 1}\\
+February 2, 2018
+\end{center}
+
+ 
+\rule{\linewidth}{0.1mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip
+
+\section{Problem Statement}
+We consider a scenario where we imagine ourselves as Botanists and we want to classify \textbf{Iris} flowers. We chose machine learning as our tool to do the task.  For instance, a sophisticated machine learning program could classify flowers based on photographs. Our ambitions are more modest-- we're going to classify Iris flowers based solely on the length and width of their sepals and petals.\\
+
+\noindent
+The Iris genus entails about 300 species, but our program will classify only the following three:
+
+\begin{itemize}
+\item Iris setosa
+\item Iris virginica
+\item Iris versicolor
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+
+\section{Dataset}
+Fortunately, this being our starting problem for machine learning we don't need a very huge amount of data. We require training datasets and test datasets. There is a set of 120 entries for this problem which we will use. Refer \href{https://en.wikipedia.org/wiki/Iris_flower_data_set#Data_set}{Dataset}. \\
+
+\noindent
+There are five columns in this dataset. The first four are feature and and the last column is the label. Each label is naturally a string (for example, "setosa"), but machine learning typically relies on numeric values. Therefore, someone mapped each string to a number. Here's the representation scheme:
+
+\begin{itemize}
+\item 0 for Setosa
+\item 1 for Versicolor
+\item 2 for Virginica
+\end{itemize}
+
+\section{Models and Training}
+The Iris classification problem is an example of supervised machine learning in which a model is trained from examples that contain labels.\\
+
+\noindent
+A \textbf{model} is the relationship between features and the label. For the Iris problem, the model defines the relationship between the sepal and petal measurements and the Iris species.
+
+\newpage
+
+\section{Analysis of Dataset}
+We have a dataset that contains 5 features where we train our model with 120 examples and test them on the rest 30 examples.
+
+\noindent
+The tools used in the plotting of different type of graphs for the analysis purpose are:
+\begin{itemize}
+\item Matplotlib
+\item Seaborn
+\item Pandas
+\end{itemize}
+
+\noindent
+We plot a lot of different type of curves and graphs that can show a relation between the quantites like mean, median etc with the features.
+In the features in our dataset, we have one feature called \textbf{ID}.
+It's nothing but a serial number given to each example.
+
+\noindent
+To verify that our labels are correctly assigned, we'd verify it using \textbf{Jupyter Notebook}. It's our choice of playground where we will do our analysis.
+
+%% Refer https://stackoverflow.com/questions/3175105/writing-code-in-latex-document
+\lstset{language=python,
+		aboveskip=3mm,
+        belowskip=3mm,
+		showstringspaces=false,
+		columns=flexible,
+		basicstyle={\small\ttfamily},
+		numbers=none,
+		numberstyle=\tiny\color{gray},
+		keywordstyle=\color{blue},
+		commentstyle=\color{codegreen},
+		stringstyle=\color{purple},
+		breaklines=true,
+		breakatwhitespace=true,
+		tabsize=4
+}
+
+\begin{lstlisting}
+from sklearn.preprocessing import LabelEncoder
+le = LabelEncoder()
+y = le.fit_transform(y)
+print le
+print y
+\end{lstlisting}
+
+\noindent
+And as expected it outputs an array of 50 0's, 50 1's and 50 2's.
+
+%% Include images only if you can fix the orientation
+%% \graphicspath{{images/}}
+%% \noindent
+%% \includegraphics{label.png}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%95
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%95
+\bigskip
+
+\newpage
+
+\pagestyle{plain}
+
+\begin{center}\vspace{-1cm}
+\textbf{ \large BTP Weekly Report 2}\\
+February 23, 2018
+\end{center}
+
+ 
+\rule{\linewidth}{0.1mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip
+
+
+\section*{Data Visualization}
+
+When comparing variables in a multidimensional
+or multivariate dataset, some conclusions must
+be drawn from the patterns in the dataset. In
+comparing different variables it is good practice
+to first make an educated assumption on what
+type of patterns you wish to find. 
+
+
+\begin{itemize}
+\item Parallel Coordinates 
+\item Andrews Curves
+\item Pair Plot
+\item Box Plot
+\end{itemize}
+
+
+
+
+\subsection*{Parallel Coordinates}
+
+
+
+
+
+Parallel coordinates is a plotting technique for plotting multivariate data. It allows one to see clusters in data and to estimate other statistics visually. Using parallel coordinates points are represented as connected line segments. Each vertical line represents one attribute. One set of connected line segments represents one data point. Points that tend to cluster will appear closer together.
+
+
+\begin{figure}[ht]
+\centering
+\label{fig:pcp}
+\graphicspath{ {images/} }
+\includegraphics[width=10cm]{images/pcp.png}
+\caption{Parallel Coordinates Plot}
+\end{figure}
+
+\subsection*{Andrews Curves }
+
+
+ Andrews curves allow one to plot multivariate data as a large number of curves that are created using the attributes of samples as coefficients for Fourier series. By coloring these curves differently for each class it is possible to visualize data clustering. Curves belonging to samples of the same class will usually be closer together and form larger structures.
+
+\begin{figure}[ht]
+\centering
+\label{fig:acp}
+\graphicspath{ {images/} }
+\includegraphics[width=10cm]{images/acp.png}
+\caption{Andrews Curves Plot}
+\end{figure}
+
+
+
+\subsection*{Pair Plot}
+
+
+The first scatterplot graph compares the
+sepal length with the classification of flower.
+The second scatterplot graph compares
+the sepal width with the classification of flower.
+The third scatterplot graph compares the
+petal length with the classification of flower. The fourth scatterplot graph compares the
+petal width with the classification of flower.
+From these four scatterplots we can determine a
+pattern and therefore create a possible predictor. 
+
+\begin{figure}[ht]
+\centering
+\label{fig:pairplot}
+\graphicspath{ {images/} }
+\includegraphics[width=10cm]{images/pairplot.png}
+\caption{Pair Plot}
+\end{figure}
+
+\subsection*{Box Plot}
+After you check the distribution of the data by plotting the histogram, the second thing to do is to look for outliers. Identifying the outliers is important because it might happen that an association you find in your analysis can be explained by the presence of outliers.
+
+
+Through box plots we find the minimum, lower quartile (25th percentile), median (50th percentile), upper quartile (75th percentile), and maximum of an continues variable.Each horizontal line starting from bottom will show the minimum, lower quartile, median, upper quartile and maximum value.
+
+
+\begin{figure}[ht]
+\centering
+\label{fig:boxplot}
+\graphicspath{ {images/} }
+\includegraphics[width=12cm]{images/boxplot.png}
+\caption{Box Plot}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+
+\newpage
+\pagestyle{plain}
+
+\begin{center}\vspace{-1cm}
+\textbf{ \large BTP Weekly Report 3}\\
+March 09, 2018
+\end{center}
+
+ 
+\rule{\linewidth}{0.1mm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip
+
+
+\section*{Cost Function}
+Cost functions are used to estimate how badly models are performing. A cost function is a measure of how wrong the model is in terms of its ability to estimate the relationship between X and y. This cost function can be estimated by iteratively running the model to compare estimated predictions against the known values of y.
+
+ The objective of a ML model, therefore, is to find parameters, weights or a structure that minimises the cost function.The parameter which minimizes cost function is gradient descent.Gradient descent is an efficient optimization algorithm that attempts to find a local or global minima of a function.
+
+
+\begin{figure}[ht]
+\centering
+\label{fig:costfunction}
+\graphicspath{ {images/} }
+\includegraphics[width=12cm]{images/costfunction.png}
+\caption{Cost Function}
+\end{figure}
+‘X’ is the number of features in the data set and ‘y’ is the corresponding predictive value.
+
+\subsection{Sigmoid Function}
+\begin{figure}[h!]
+\centering
+\label{fig:sigmoid}
+\graphicspath{ {images/} }
+\includegraphics[width=6cm]{images/SF.png}
+\caption{Sigmoid Function}
+\end{figure}
+
+For classification, as in the labeling iris task, linear regression is not the right approach as it will give too much weight to data far from the decision frontier. A linear approach is to fit a sigmoid function or logistic function.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\bigskip
+
+
+
+\subsection{Multiclass Classification: One-vs-all}
+Now we will approach the classification of data when we have more than two categories. Instead of y = {0,1} we will expand our definition so that y = {0,1...n}.
+Since y = {0,1...n}, we divide our problem into n+1 (+1 because the index starts at 0) binary classification problems; in each one, we predict the probability that 'y' is a member of one of our classes.
+
+We are basically choosing one class and then lumping all the others into a single second class. We do this repeatedly, applying binary logistic regression to each case, and then use the hypothesis that returned the highest value as our prediction.
+
+
+\begin{figure}[!h]
+\centering
+\label{fig:onevsall}
+\graphicspath{ {images/} }
+\includegraphics[width=10cm]{images/onevsall.png}
+\caption{One-vs-all}
+\end{figure}
+
+Updates Theta for minimizing costfunction after 50 iterations.Updated theta is passed on to predictall function which predicts index of species.
+
+\subsection{Predictall}
+Predictall function predicts the index of species.
+\begin{figure}[!h]
+\centering
+\label{fig:predictall}
+\graphicspath{ {images/} }
+\includegraphics[width=8cm]{images/predictall.png}
+\caption{Predictall}
+\end{figure}
+
+Now taking the mean gives accuracy of training model.
+
+
+\end{document}
