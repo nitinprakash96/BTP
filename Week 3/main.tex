@@ -173,35 +173,20 @@ And as expected it outputs an array of 50 0's, 50 1's and 50 2's.
 \bigskip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%95
 \bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%95
-\bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
+\newpage
+
+\pagestyle{plain}
 
 \begin{center}\vspace{-1cm}
 \textbf{ \large BTP Weekly Report 2}\\
 February 23, 2018
 \end{center}
 
+ 
 \rule{\linewidth}{0.1mm}
-
-
-
-\flushbottom
-\maketitle
-
-\thispagestyle{empty}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bigskip
 
 
 \section*{Data Visualization}
@@ -298,50 +283,19 @@ Through box plots we find the minimum, lower quartile (25th percentile), median 
 \bigskip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 \bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
+\newpage
+\pagestyle{plain}
 
 \begin{center}\vspace{-1cm}
 \textbf{ \large BTP Weekly Report 3}\\
-March 9, 2018
+March 09, 2018
 \end{center}
 
+ 
 \rule{\linewidth}{0.1mm}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-\bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%95
-\bigskip
-
-
-\flushbottom
-\maketitle
-
-\thispagestyle{empty}
 
 
 \section*{Cost Function}
@@ -360,22 +314,22 @@ Cost functions are used to estimate how badly models are performing. A cost func
 ‘X’ is the number of features in the data set and ‘y’ is the corresponding predictive value.
 
 \subsection{Sigmoid Function}
-For classification, as in the labeling iris task, linear regression is not the right approach as it will give too much weight to data far from the decision frontier. A linear approach is to fit a sigmoid function or logistic function.
-
-
 \begin{figure}[h!]
 \centering
 \label{fig:sigmoid}
 \graphicspath{ {images/} }
-\includegraphics[width=10cm]{images/SF.png}
+\includegraphics[width=6cm]{images/SF.png}
 \caption{Sigmoid Function}
 \end{figure}
+
+For classification, as in the labeling iris task, linear regression is not the right approach as it will give too much weight to data far from the decision frontier. A linear approach is to fit a sigmoid function or logistic function.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 \bigskip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 \bigskip
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%95
-\bigskip
+
 
 
 \subsection{Multiclass Classification: One-vs-all}
@@ -385,11 +339,11 @@ Since y = {0,1...n}, we divide our problem into n+1 (+1 because the index starts
 We are basically choosing one class and then lumping all the others into a single second class. We do this repeatedly, applying binary logistic regression to each case, and then use the hypothesis that returned the highest value as our prediction.
 
 
-\begin{figure}[h!]
+\begin{figure}[!h]
 \centering
 \label{fig:onevsall}
 \graphicspath{ {images/} }
-\includegraphics[width=12cm]{images/onevsall.png}
+\includegraphics[width=10cm]{images/onevsall.png}
 \caption{One-vs-all}
 \end{figure}
 
@@ -397,11 +351,11 @@ Updates Theta for minimizing costfunction after 50 iterations.Updated theta is p
 
 \subsection{Predictall}
 Predictall function predicts the index of species.
-\begin{figure}[h!]
+\begin{figure}[!h]
 \centering
 \label{fig:predictall}
 \graphicspath{ {images/} }
-\includegraphics[width=12cm]{images/predictall.png}
+\includegraphics[width=8cm]{images/predictall.png}
 \caption{Predictall}
 \end{figure}
 
